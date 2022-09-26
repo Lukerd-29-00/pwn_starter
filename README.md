@@ -13,4 +13,4 @@ A starter script for x86\_64 linux PWNing. Designed to be used for stripped ELF 
 <img src=https://github.com/Lukerd-29-00/pwn_starter/blob/main/export.png?raw=true width=1100 height=500 />
 </p>
 <p>Save the resulting file in the folder with your exploit, and write the name/path in the symbolsFile global variable. Now, when you launch with pwntools's magic GDB argument, the program will automatically assign the addresses of the functions you've exported to variables. You can set a breakpoint with the command</p>
-b *$\<function\>.
+b *$[function].
