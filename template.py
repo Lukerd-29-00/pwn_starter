@@ -52,10 +52,9 @@ if args.REMOTE:
 elif args.GDB:
   p = process(filename)
   log.success(f"Process {p.pid} initialized")
-  if not path.exists(gdbscript):
-    log.info("writing gdbscript")
-    get_gdbscript(symbolsFile,p)
-    log.success("Wrote gdbscript!")
+  log.info("writing gdbscript")
+  get_gdbscript(symbolsFile,p)
+  log.success("Wrote gdbscript!")
   with open(gdbscript,"r") as f:
     gdb.attach(p,gdbscript=f)
   log.success("GDB attached successfully.")
